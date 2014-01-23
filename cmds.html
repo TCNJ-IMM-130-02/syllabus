@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Basic Terminal, Git &amp; Github Commands</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Terminal, Git &amp; Github commands for TCNJ IMM Design Fundementals for the Web">
+<meta name="author" content="thomesoni@gmail.com">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="./styles/IMM130.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+
+<header>
+<h1>Standard Workflow &amp; Commands for Terminal, Git &amp; Github</h1>
+<p>Design Fundamentals for the Web</p>
+</header>
+
+<section id="workflow">
+<h1>Standard Workflow</h1>
+<p>Here's your standard workflow when working locally in the labs or at home:</p>
+<ol>
+<li>Clone your repository &ndash; <code>git clone &lt;repository_address&gt;</code></li>
+<li>Edit your files locally using your favorite editor</li>
+<li>Check which files have changed &ndash; <code>git status</code></li>
+<li>Stage changes for commit &ndash;<code>git add &lt;file_name&gt;</code></li>
+<li>Commit changes &ndash; <code>git commit -m "&lt;your_commit_message&gt;"</code></li>
+<li>Push changes up to Github &ndash; <code>git push origin master</code></li>
+<li>Log into <a href="http://github.com" title="for managing your code 'in the cloud' & hosting your static pages">Github</a> and update your <em>gh-pages</em> branch with a pull request</li>
+<li>Keep it clean &ndash; delete your local files when you're finished for the day</li>
+</ol>
+</section>
+
+<section id="terminal">
+<h1>Terminal Commands</h1>
+
+<h2>Navigating Directories</h2>
+<dl>
+<dt>List Contents of a Directory</dt>
+<dd><code>ls</code></dd>
+<dt>Change Directories</dt>
+<dd><code>cd &lt;dir_name&gt;</code></dd>
+</dl>
+
+<h3>Finding Your USB Drive &#40;Mac&#41;</h3>
+<ol>
+<li><code>cd /Volumes</code></li>
+<li><code>ls</code> &ndash; to find the name of your USB drive</li></li>
+<li><code>cd &lt;your_drive_name&gt;</code></li>
+</ol>
+
+<h3>Finding Your USB Drive &#40;PC&#41;</h3>
+<ol>
+<li>type in the drive letter of your USB drive followed by a colon &ndash; e.g <code>E:</code></code></li>
+<li><code>ls</code> &ndash; to see the contents of your USB drive</li>
+</ol>
+
+<h2>Creating Directories &amp; Files</h2>
+<dl>
+<dt>Make an empty directory</dt>
+<dd><code>mkdir &lt;dir_name&gt;</code></dd>
+<dt>Create a new file</dt>
+<dd>Use your favorite editor to create and save your file to your new directory</dd>
+</dl>
+
+<h2>Copying Files &amp; Directories</h2>
+<dl>
+<dt>Copy a file</dt>
+<dd><code>cp &lt;file_name&gt; &lt;new_file_name&gt;</code></dd>
+<dt>copy a directory</dt>
+<dd><code>cp &lt;dir_name&gt; &lt;new_dir_name&gt;</code></dd>
+</dl>
+
+<h2>Deleting Files &amp; Directories</h2>
+<dl>
+<dt>Delete a file</dt>
+<dd><code>rm &lt;file_name&gt;</code></dd>
+<dt>Delete a directory</dt>
+<dd><code>rmdir &lt;dir_name&gt;</code></dd>
+</dl>
+</section>
+
+<section id="git">
+<h1>Git Commands</h1>
+<dl>
+<dt>Clone a repository to your locall machine</dt>
+<dd><code>git clone &lt;repo_address&gt;</code></dd>
+<dt>Update a local repository from Github master branch</dt>
+<dd><code>git pull</code></dd>
+<dt>Check what changes have been made</dt>
+<dd><code>git status</code></dd>
+<dt>Stage changes for commit</dt>
+<dd><code>git add &lt;file_name&gt;</code></dd>
+<dt>Commit your changes</dt>
+<dd><code>git commit -m "&lt;commit_message&gt;"</code></dd>
+<dt>Commit your changes</dt>
+<dd><code>git commit -m "&lt;commit_message&gt;"</code></dd>
+<dt>Push your changes up to Github master branch</dt>
+<dd><code>git push origin master</code></dd>
+</dl>
+</section>
+
+<section id="github">
+<h1>Github Commands</h1>
+<dl>
+<dt>Create a repository & link your Github Pages</a></dt>
+<dd>
+<p>Go to the <a href="http://pages.github.com/" title="Websites for you and your projects">Github Pages website</a></p>
+<ol>
+<li>select the 'Project Site' button</li>
+<li>select 'Start from Scratch' button</li>
+<li>skip the optional step of making gh-pages the default branch</li>
+</ol>
+</dd>
+</dl>
+<section id="git">
+
+</div> <!-- end of page -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+</body>
+</html>
