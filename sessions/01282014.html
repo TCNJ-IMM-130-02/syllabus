@@ -31,6 +31,12 @@
 </nav>
 
 <section>
+<h1>Review</h1>
+<a href="./01212014.html" title="Agenda for Tues. Jan 21, 2014">Last week&#8217;s agenda</a>
+
+</section>
+
+<section>
 <h1>User Personas &amp; User Stories</h1>
 
 </section>
@@ -43,15 +49,71 @@
 <section>
 <h1>How the Web Works</h1>
 <h2>The Internet</h2>
+<p>The &ldquo;Internet&rdquo; is the network of computer networks - <a href="http://en.wikipedia.org/wiki/Internet" title="Wikipedia entry for &ldquo;Internet&rdquo;">Internet on Wikipedia</a></p>
+<p>Each computer on a network has an address, so other computers can find it. This address looks like this (IPv4)<code>192.168.0.1</code> or this (IPv6)<code>2002:43a5:39b:1234:9cc4:b24d:4b98:27fb</code></p>
+<h3>Lots of Network Services, for example:</h3>
+<ul>
+<li>Email</li>
+<li>FTP</li>
+<li>Telnet</li>
+<li>peer-to-peer networks</li>
+<li>VoIP</li>
+<li>HTTP</li>
+</ul>
+<p>Today, computers aren&#8217;t the only things with network addresses. &ldquo;The Internet of Things&rdquo; connects everything from cell phones to refridgerators, making everything internet &ldquo;addressable&rdquo;.</p>
 
 <h2>The World Wide Web</h2>
+<p>The World Wide Web was created in the 1990&#8217;s by Tim Berners-Lee as a service to link together documents over the Internet - <a href="http://en.wikipedia.org/wiki/World_Wide_Web" title="Wikipedia entry for &ldquo;World Wide Web&rdquo;">World Wide Web on Wikipedia</a></p>
+<p>Documents on the WWW have their own addresses too. These are known as URIs. URI stands for <em>Universal Resource Identifier</em>. A URI can contain a name, e.g. <code>markdthompson.github.io/IMM-130-3/sessions/01282014.html</code>,
+and a network service protocol, e.g. <code>http://</code>. If a URI has both, it&#8217;s known a URL, or <em>Universal Resource Locator</em> &ndash; that&#8217;s what you put in the address bar of your browser when you're surfing the web.</p>
 <h3>HTTP</h3>
+<p>HTTP stands for <em>Hypertext Transfer Protocol</em> and is the network service protocol used by the WWW. Web <em>servers</em> listen for requests from web <em>clients</em>, e.g your browser, and return the requested document if it can be found.</p>
+<p>Web servers return different <a href="http://www.w3schools.com/tags/ref_httpmessages.asp" title="HTTP Status Codes at W3CSchools">status codes</a> when they receive a request for a document. The most common are:</p>
+<ul>
+<li>200 - success, found the document</li>
+<li>404 - blah, document not found</li>
+<li>302 - the document has been moved</li>
+<li>500 - the server encountered an error</li>
+</ul>
+
 <h3>Browsers</h3>
+<p>To access URLs, we use applications specifically designed to read web documents. These applications are called <em>browsers</em>. There are many different browsers in use today, but the main ones are:</p>
+<ul>
+<li>Mozilla Firefox</li>
+<li>Google Chrome</li>
+<li>Internet Explorer</li>
+<li>Apple Safari</li>
+<li>Opera</li>
+</ul>
+
+<p>Each of these browsers are made by different organizations, and as a result, they have their own features and priorities with respect to how they read and display web documents. Fortunately, most 
+of these browsers support <em>web standards</em> that make it easier to create web sites that look more or less the same across most of these browsers.</p>
+
 <h3>HTML</h3>
+<p>HTML stands for <em>Hypertext Markup Language</em> and is currently in version 4.1. Modern web browsers also are beginning to support HTML5, which provides a richer set of features than HTML 4.1. 
+We will be building our web pages using HTML5.</p>
+
 </section>
 
 <section>
 <h1>Basic HTML</h1>
+<p>An HTML document is a structured document that web browsers read, interpret and then display to users. When we write HTML, we&#8217;re writiong markup for the web browser &ndash; telling it how to display our content to 
+users. We do this using HTML elements &amp; tags:</p>
+
+<ul>
+<li><code>&lt;&#33;doctype html&gt;</code></li>
+<li><code>&lt;html&gt;. . .&lt;&#47;html&gt;</code></li>
+<li><code>&lt;head&gt;. . .&lt;&#47;head&gt;</code></li>
+<li><code>&lt;title&gt;Your Title Goes Here&lt;&#47;title&gt;</code></li>
+<li><code>&lt;body&gt;. . .&lt;&#47;body&gt;</code></li>
+<li><code>&lt;h1&gt;Heading 1&lt;&#47;h1&gt;</code></li>
+<li><code>&lt;h2&gt;Heading 2&lt;&#47;h2&gt;</code></li>
+<li><code>&lt;h3&gt;Heading 3&lt;&#47;h3&gt;</code></li>
+<li><code>&lt;p&gt;Paragraph&lt;&#47;p&gt;</code></li>
+<li><code>&lt;&#33;-- This is a comment; the browser will ignore it. We use comments to make notes for ourselves --&gt;</code></li>
+</ul>
+
+<p>We name our documents <code>something.html</code>, so that web server
 
 </section>
 
@@ -62,7 +124,6 @@
 <li><a href="http://git-scm.com/" title="Git --fast-verson-control">Git</a></li>
 <li><a href="https://github.com/" title="Frictionless development">Github</a></li>
 <li><a href="http://pages.github.com/" title="Websites for you and your projects">Hosting your projects on Github Pages</a></li>
-<li><a href="../cmds.html" title="basic commands for the Terminal, Git & Github">Help &amp; basic commands</a></li>
 </ul>
 </section>
 
@@ -71,14 +132,18 @@
 <h1>Assignment 2</h1>
 <h2>Reading</h2>
 <ul>
-<li>Chapters 1 &amp; 2 in <em><a href="http://www.amazon.com/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956" title="Design for Hackers on Amazon.com">Design for Hackers</a></em></li>
+<li>Chapters 4 in <em><a href="http://www.amazon.com/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956" title="Design for Hackers on Amazon.com">Design for Hackers</a></em></li>
 </ul>
 
 <h2>Design</h2>
+
 <h3>Sitemap</h3>
+<p>Log into Google Drive and create a new Google Drawing. Using shapes, create a simple sitemap based on the content you identified using your User Stories.</p>
 
-
-<h3>Wireframe</h3>
+<h3>Wireframes</h3>
+<p>On a sheet of paper, make a sketch of each of the pages you identified in your Sitemap. Mark down where you want your headlines, blocks of paragraph text, bullet point lists and images. 
+When you're done, scan the document and insert it into a new Google document and share it with me at <a href="mailto:thomesoni@gmail.com" title="share your document with me">thomesoni@gmail.com</a>. 
+Refer to page 32 in <em>Design For Hackers</em> for more info on wireframes.</p> 
 
 </section>
 
