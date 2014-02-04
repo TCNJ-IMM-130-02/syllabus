@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IMM 130-02 &ndash; Session 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Fundementals for the Web Session #3">
+<meta name="author" content="thomesoni@gmail.com">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/IMM130.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+
+<header>
+<h1>Design Fundamentals for the Web &ndash; Session 3</h1>
+<p>February 4, 2014</p> 
+</header>
+
+<nav>
+<a href="../" title="back to Syllabus">&lt;&lt; Syllabus</a>
+</nav>
+
+<section>
+<h1>Review</h1>
+<a href="./01282014.html" title="Agenda for Tues. Jan 28, 2014">Last week&#8217;s agenda</a>
+
+</section>
+<hr>
+
+<section>
+<h1>First HTML Page</h1>
+<ul>
+<li>Demo - let&#39;s <a href="https://github.com" title="your Github account">create an HTML page</a> and publish it to Github Pages</li>
+<li>Exercise - Create your own home page and publish it to Github Pages</li>
+</ul> 
+</section>
+<hr>
+<!--
+<section>
+<h1>Managing the Your Projects with Git, Github &amp; Github Pages</h1>
+<ul>
+<li><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control" title="more about version control">What's version control?</a></li>
+<li><a href="http://git-scm.com/" title="Git --fast-verson-control">Git</a></li>
+<li><a href="https://github.com/" title="Frictionless development">Github</a></li>
+<li><a href="http://pages.github.com/" title="Websites for you and your projects">Hosting your projects on Github Pages</a></li>
+</ul>
+
+<h2>Execise</h2>
+<ul>
+<li>Create an account of <a href="http://github.com/" title="Frictionless development">Github</a></li>
+<li>Create your own <a href="http://pages.github.com/" title="Websites for you and your projects">Github Pages project</a> on Github</li>
+<li>Let&#39;s create a real HTML page on Github</li>
+</ul>
+</section>
+
+<hr>
+-->
+
+<section>
+<h1>Sitemaps</h1>
+<ul>
+<li>Demo - let&#39;s <a href="https://drive.google.com" title="log into Google Drive">create a sitemap</a> based on user stories</li>
+<li>Exercise - log into Google Drive and create a new Google Drawing. Using shapes, create a simple sitemap based on your user stories from last week</li>
+<li>Exercise - log into Github and create HTML pages according to your sitemap. Make sure each Page has a title, a main heading, a paragraph describing what the page is for and links to the other pages.</li> 
+</ul> 
+</section>
+<hr>
+
+<section>
+<h1>Basic CSS</h1>
+<h2>What are Cascading Style Sheets?</h2>
+<p>Cascading Style Sheets allow us to define how we want our HTML to appear on screen. The HTML gives our content structure, CSS presents it. Proper web design separates 
+content (HTML) from presentation (CSS). Separating content and presentation gives us several benefits:</p>
+<ul>
+<li>we can work on each separately, which is easier in a team environment</li>
+<li>helps us organize our projects, html is here, styling here</li>
+<li>simplifies the creation of swappable &ldquo;Themes&rdquo;</li>
+</ul>
+
+<h2>Including Styles</h2>
+<ul>
+<li>
+Link external stylesheets using the <code>&lt;link&gt;</code> tag, e.g. <code>&lt;link rel="stylesheet" href="mystyles.css"&gt;</code>
+<ul>
+<li>External stylesheets should be saved with the <em>.css</em> file extension, e.g. <em>mystyle.css</em></li>
+</ul>
+</li>
+<li>Embed them using the <code>&lt;style&gt;...&lt;/style&gt;</code> tag</li>
+<li>Use them inline with the <code>style="..."</code> HTML element attribute</li>
+</ul>
+
+<h3>What does &ldquo;Cascading&rdquo; mean?</h3>
+<p>We can apply our styles in sequence, selectively overriding previously defined styles, by &ldquo;cascading&rquo; a new style on top of it.</p>
+<ul>
+<li>set your base styles using linked stylesheets</li>
+<li>cascade override styles using the <code>&lt;style&gt;</code> tag</li>
+<li>avoid inline styles because they break our ability to separate content and presentation</li>
+</ul>
+
+<h2>CSS Selectors</h2>
+<ul>
+<li>tag names</li>
+<li>ids</li>
+<li>classes</li>
+</ul>
+
+</section>
+
+<hr>
+<section>
+<h1>Typestyles</h1>
+<p>Type is the most basic mode of communication in web design &ndash; we use words to communicate first. Good design presents our ideas quickly &amp; simply, 
+making it easy for our audience to understand what we're communicating. Typestyles are specific letter forms that have been developed for presenting text on different media
+(stone, paper, computer screen, etc). A font is a packaged typestyle that includes additional specifications, including sizes, weights, styles (normal, italic, oblique) &amp; spacing information.</p>
+
+<h2>Serif &amp; San-Serif Fonts</h2>
+<p>There are two main font families used on the web:<p>
+<ul>
+<li>Serif</li>
+<li>San Serif</li> 
+</ul>
+</section>
+
+<hr>
+<section>
+<h1>Using Type with CSS</h1>
+<p>There are a number of properties you can use to control typestyles using CSS:</p>
+<ul>
+<li>font-family</li>
+<li>font-size</li>
+<li>line-height</li>
+<li>font-style</li>
+<li>font-weight</li>
+<li>font-variant</li>
+</ul>
+
+<p>You can also set all of them at once using the <code>font</code> property:<p>
+
+</section>
+
+<hr>
+
+<section>
+<h1>Assignment 3</h1>
+<h2>Reading</h2>
+<ul>
+<li>Chapter 3 and Appendices A &amp; B in <em><a href="http://www.amazon.com/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956" title="Design for Hackers on Amazon.com">Design for Hackers</a></em></li>
+</ul>
+
+<h2>Design</h2>
+
+<h3>Create a Type Treatment for Your Pages</h3>
+<ul>
+<li>
+After you have completed the reading assignment, revisit your HTML pages and create a type treatment for them.
+<ul>
+<li>Pick a font or two (remember smaller text should probably be san serif for reading on the web, headings could be serif font, but choose carefully according to the guidelines in Appendix A in <em>Design for HAckers</em></ul>
+<li>Create a stylesheet
+</li>
+<li></li>
+</ul>
+</section>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+</body>
+</html>
