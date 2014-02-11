@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IMM 130-02 &ndash; Session 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Fundementals for the Web Session #4">
+<meta name="author" content="thomesoni@gmail.com">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/IMM130.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+
+<header>
+<h1>Design Fundamentals for the Web &ndash; Session 4</h1>
+<p>February 11, 2014</p> 
+</header>
+
+<nav>
+<a href="../" title="back to Syllabus">&lt;&lt; Syllabus</a>
+</nav>
+
+<section>
+<h1>Review</h1>
+<a href="./02042014.html" title="Agenda for Tues. Feb 4, 2014">Last week&#8217;s agenda</a>
+
+</section>
+<hr>
+
+<section>
+<h1>Typestyles</h1>
+<p>Type is the most basic mode of communication in web design &ndash; we use words to communicate first. Good design presents our ideas quickly &amp; simply, 
+making it easy for our audience to understand what we're communicating. Typestyles are specific letter forms that have been developed for presenting text on different media
+(stone, paper, computer screen, etc). A font is a packaged typestyle that includes additional specifications, including sizes, weights, styles (normal, italic, oblique) &amp; spacing information.</p>
+
+<h2>Serif &amp; Sans-Serif Fonts</h2>
+<p>There are two main font families used on the web:<p>
+<ul>
+<li>Serif</li>
+<li>Sans-Serif</li> 
+</ul>
+</section>
+
+<hr>
+<section>
+<h1>Using Type with CSS</h1>
+<p>There are a number of properties you can use to control typestyles using CSS:</p>
+<ul>
+<li>font-family, i.e <code>* {font-family: Arial, Helvetica, sans-serif;}</code></li>
+<li>font-size, i.e <code>p {font-size:12px;}</code></li>
+<li>line-height, i.e <code>h1 {line-height: 2em;}</code></li>
+<li>font-style, i.e <code>.italics {font-style: italics;}</code></li>
+<li>font-weight, i.e <code>.bold {font-weight: bold;}</code></li>
+<li>font-variant, i.e <code>.small_caps {font-variant: small-caps;}</code></li>
+</ul>
+
+<p>You can also set all of them at once using the <code>font</code> property, i.e. <code>h1 {font:30px Times New Roman, serif;}</code>.<p>
+<p>You can find more details on CSS font properties at <a href="http://www.w3schools.com/cssref/pr_font_font.asp" title="find out more about font properties at W3Schools">W3Schools</a>.</p>
+
+<h2>Exercise</h2>
+<ul>
+<li>Go to <a href="http://jsfiddle.net" title="navigate to JSFiddle">JSFiddle</a></li>
+<li>In the HTML pane, create a few html elements including an <code>&lt;h1&gt;</code>, a <code>&lt;p&gt;</code>, and an anchor tag <code>&lt;a&gt;</code></li>
+<li>In the CSS pane, create a few CSS selectors (one for each of your HTML elements), and try changing the font-family, font-size and font-style for all of them &amp; each individually</li> 
+</ul>
+</section>
+<hr>
+
+<section>
+<h1>New HTML Elements for Creating Layouts</h1> 
+<ul>
+<li><code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li><code>&lt;header&gt;&lt;/header&gt;</code></li>
+<li><code>&lt;nav&gt;&lt;/nav&gt;</code></li>
+<li><code>&lt;aside&gt;&lt;/aside&gt;</code></li>
+<li><code>&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>&lt;/ul&gt;</code></li>
+<li><code>&lt;article&gt;</code></li>
+<li><code>&lt;section&gt;&lt;/section&gt;</code></li>
+<li><code>&lt;footer&gt;&lt;/footer&gt;</code></li>
+</ul>
+
+<h2>Exercise</h2>
+<ul>
+<li>Log in to <a href="http://github.com" title="login to Github">Github</a></li>
+<li>Create a new web page using the template page you've been working on (e.g. index.html)</li>
+<li>In addition to the <code>&lt;&#33;doctype html&gt;</code>, <code>&lt;html&gt;&lt;&#47;html&gt;</code>, <code>&lt;head&gt;&lt;&#47;head&gt;</code>, 
+<code>&lt;title&gt;&lt;&#47;title&gt;</code> and <code>&lt;body&gt;&lt;&#47;body&gt;</code> elements, let&#39;s create a wrapper <code>&lt;div&gt;&lt;/div&gt;</code> holding
+some additional layout elements, including a <code>&lt;header&gt;&lt;/header&gt;</code> and another <code>&lt;div&gt;&lt;/div&gt;</code> to hold our content elements: <code>&lt;nav&gt;&lt;/nav&gt;</code>, 
+an <code>&lt;article&gt;&lt;/article&gt;</code>, an <code>&lt;aside&gt;&lt;/aside&gt;</code>,
+and a <code>&lt;footer&gt;&lt;/footer&gt;</code></li> 
+</ul>
+
+</section>
+<hr>
+
+<section>
+<h1>New CSS Properties for Creating Layouts</h1> 
+<h2>CSS Centering</h2>
+<ul>
+<li>text-align: center;</li>
+<li>margin: xxxpx auto;</li>
+</ul>
+
+<h3>Centering Demo</h3>
+<p>Let&#39;s open up JSFiddle and experiment with the CSS centering porperties:</p>
+<ul>
+<li>text-align: center;</li>
+<li>margin: xxxpx auto;</li>
+</ul>
+
+<h3>More info on CSS Centering</h3>
+<ul>
+<li><a href="http://www.w3schools.com/cssref/pr_class_text-align.asp" title="text-align property reference on W3Schools">W3Schools: float property</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_class_margin.asp" title="margin property reference on W3Schools">W3Schools: margin property</a></li>
+</ul>
+
+<h2>CSS Positioning</h2>
+<ul>
+<li>position: static | absolute | fixed | relative | initial | inherit;</li>
+<li>left: xpx;</li>
+<li>right: xpx;</li>
+<li>z-index: x;</li>
+</ul>
+
+<h3>Positioning Demo</h3>
+<p>Let&#39;s open up JSFiddle and experiment with the CSS positioning porperties:</p>
+<ul>
+<li>position: static | absolute | fixed | relative | initial | inherit;</li>
+<li>left: xpx;</li>
+<li>right: xpx;</li>
+<li>z-index: x;</li>
+</ul>
+
+<h3>More info on CSS Positioning</h3>
+<ul>
+<li><a href="http://www.w3schools.com/cssref/pr_class_position.asp" title="position property reference on W3Schools">W3Schools: position property</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_pos_left.asp" title="left property reference on W3Schools">W3Schools: left property</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_pos_right.asp" title="right property reference on W3Schools">W3Schools: right property</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_pos_z-index.asp" title="z-index property reference on W3Schools">W3Schools: positionz-index property</a></li>
+</ul>
+
+<h2>CSS Floating</h2>
+<ul>
+<li>float: left | right | clear;</li>
+</ul>
+
+<h3>Float Demo</h3>
+<p>Let&#39;s open up JSFiddle and experiment with the CSS positioning porperties:</p>
+<ul>
+<li>float: left | right | clear;</li>
+</ul>
+
+<h3>More info on CSS Floating</h3>
+<ul>
+<li><a href="http://www.w3schools.com/cssref/pr_class_float.asp" title="float property reference on W3Schools">W3Schools: float property</a></li>
+</ul>
+
+<h2>Exercise</h2>
+<ul>
+<li>Log in to <a href="http://github.com" title="login to Github">Github</a></li>
+<li>Open up the page you created in earlier with the HTML layout elements included</li>
+<li>Create a new stylesheet and link it into your HTML page</li>
+<li>
+	Using id and tag name selectors, let&#39;s apply some style rules to our layout elements
+	<ul>
+	<li>Use an id selector to center your wrapper &lt;div&gt;</li>
+	<li>Use a tag selector to center the headline in your &lt;header&gt;</li>
+	<li>Use tag selectors to float your &lt;nav&gt;, &lt;article&gt; &amp; &lt;aside&gt; elements</li>
+	<li>Use a tag selector to style your &lt;footer&gt; and clear your floats</li>
+	</ul>
+</li> 
+</ul>
+
+</section>
+<hr>
+
+<section>
+<h1>Types of Layouts</h1> 
+<ul>
+<li>static</li>
+<li>liquid</li>
+<li>responsive</li>
+</ul>
+
+<p>Check out <a href="http://liquidapsive.com/" title="check out liquidapsive.com">Liquidapsive.com</a> to get a better idea of some of the different types of layouts your can make, depending on your users&#39; needs.</p>
+</section>
+<hr>
+
+
+<section>
+<h1>Assignment 4</h1>
+<h2>Reading</h2>
+<ul>
+<li>Chapters 5 &amp; 7 in <em><a href="http://www.amazon.com/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956" title="Design for Hackers on Amazon.com">Design for Hackers</a></em></li>
+</ul>
+
+<h2>Design</h2>
+
+<h3>Create a Static Layout for Your Pages</h3>
+
+<p>After you have completed the reading assignment, revisit your HTML pages and create a static layout using CSS Positioning.</p>
+<ul>
+<li>Create a wrapper &lt;div&gt; to hold the content of your page and center it horizontally.</li>
+<li>Create a &lt;header&gt;, a main content &lt;div&gt; containing a &lt;nav&gt;, an &lt;article&gt; and an &lt;aside&gt;, and finally, a &lt;footer&gt; container at the end of the page.</li>
+<li>Re-apply your type treatment appropriately for these new page elements.</li>
+</ul>
+</section>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+</body>
+</html>
