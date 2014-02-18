@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IMM 130-02 &ndash; Session 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Fundementals for the Web Session #4">
+<meta name="author" content="thomesoni@gmail.com">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/IMM130.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+
+<header>
+<h1>Design Fundamentals for the Web &ndash; Session 5</h1>
+<p>February 18, 2014</p> 
+</header>
+
+<nav>
+<a href="../" title="back to Syllabus">&lt;&lt; Syllabus</a>
+</nav>
+
+<section>
+<h1>Review</h1>
+<a href="./02112014.html" title="Agenda for Tues. Feb 11, 2014">Last week&#8217;s agenda</a>
+
+</section>
+<hr>
+
+<section>
+<h1>Review of the Web Design Process</h1>
+<ol>
+<li>Identify the types of users you need to communicate with</li>
+<li>Identify what each user type needs to be able to do</li>
+<li>Organize your content semantically</li>
+<li>Compose appropriate layouts for your content</li>
+<li>Create visual hierarchies for your content with type</li>
+<li class="bold">Apply design principles to emphasize relationships between elements</li>
+<li>Create mood and enhance your visual hierarchies and element relationships using color</li>
+<li>Breath life into your design with behavioral feedback</li>
+<li>Test, rinse &amp; repeat!</li>
+</ol> 
+</section>
+
+<hr>
+<section>
+<h1>Basic Design Principles</h1>
+<ul>
+<li>Dominance - draws in the user</li>
+<li>Similarity - helps the user figure out how to use your site</li>
+<li>Rhythm - helps move the user through your content</li>
+<li>Texture - helps differentiate your content elements</li>
+<li>Direction - helps focus the users&#39;s attention and leads them through your content</li>
+<li>Contrast - helps differentiate your content elements</li>
+</ul>
+</section>
+<hr>
+
+<section>
+<h1>Controlling Whitespace with CSS Padding &amp; Margins </h1>
+<p>Whitespace is a key component for establishing dominance of a design element.</p>
+<h2>Margins</h2>
+<p>Margins create space on the outside of the HTML element.</p>
+<ul>
+<li><code>margin: top right bottom left;</code></li>
+<li><code>margin-top: xxx px | % | em;</code></li>
+<li><code>margin-right: xxx px | % | em;</code></li>
+<li><code>margin-bottom: xxx px | % | em;</code></li>
+<li><code>margin-left: xxx px | % | em;</code></li>
+</ul>
+
+<h2>Padding</h2>
+<p>Padding creates space on the inside of the HTML element.</p>
+<ul>
+<li><code>padding: top right bottom left;</code></li>
+<li><code>padding-top: xxx px | % | em;</code></li>
+<li><code>padding-right: xxx px | % | em;</code></li>
+<li><code>padding-bottom: xxx px | % | em;</code></li>
+<li><code>padding-left: xxx px | % | em;</code></li>
+</ul>
+
+<h2>More Info on Margins &amp; Padding</h2>
+<ul>
+<li><a href="http://www.w3schools.com/cssref/pr_margin.asp" title="Margins on W3Schools">W3Schools: CSS Margin Properties</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_padding.asp" title="Padding on W3Schools">W3Schools: CSS Padding Properties</a></li>
+</ul>
+
+<h2>Exercise</h2>
+<ul>
+<li>Go to <a href="http://jsfiddle.net" title="navigate to JSFiddle">JSFiddle</a></li>
+<li>In the HTML pane, create a wrapper &lt;div&gt;, a &lt;nav&gt;, an &lt;article&gt; and an &lt;aside&gt; HTML element</li>
+<li>In the CSS pane, set the widths of each of your elements; the wrapper, the nav, the article &amp; the aside</li> 
+<li>Add margins to each of your inner elements (nave, article &amp; aside) to create gutters between them</li>
+<li>What happens to the width?</li>
+<li>Now let&#39;s Add a paragraph of text within the &lt;article&gt;</li>
+<li>Where does the text line up?</li>
+<li>Create your own padding for the article element in the CSS pane and see what happens</li>
+</ul>
+</section>
+<hr>
+
+<section>
+<h1>Styling Lists</h1> 
+<p>Lists are commonly used as navigational elements and are frequently used to establish similarity, rhythm &amp; direction.</p>  
+
+<h2>List Direction</h2>
+<p>Lists can be displayed verically (the default) or horizontally by setting the <em>display</em> CSS property value to <em>inline</em>. For example:</p>
+<p><code>nav li { display:inline;}</code></p>
+
+<h2>Horizontal Menu Demo</h2>
+
+<h2>List Styles</h2>
+<ul>
+<li><code>list-style-type: disc | circle | square | etc;</code></li>
+<li><code>list-style-position: outside | inside;</code></li>
+<li><code>list-style-image: url('your_image_filename') | none;</code></li>
+</ul>
+
+<h2>List Style Menu Demo</h2>
+
+<h2>More Info on Styling Lists</h2>
+<ul>
+<li><a href="http://www.w3schools.com/cssref/pr_class_display.asp" title="CSS Display Property on W3Schools">W3Schools: CSS Display Property</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_list-style.asp " title="CSS List Style Properties">W3Schools: CSS List Style Properties</a></li>
+</ul>
+</section>
+<hr>
+
+<section>
+<h1>Styling Links</h1>
+<p>Links are a critical for effective design because they imply interaction as well as content. Links can be in multiple states, can be internal or external, and can be grouped into categories.
+ All of this information should be presented visually in your design.</p>
+
+<h2>Link States</h2>
+<ul>
+<li><code>a:link</code> - a normal, unvisited link</li>
+<li><code>a:visited</code> - a link the user has visited</li>
+<li><code>a:hover</code> - a link when the user mouses over it</li>
+<li><code>a:active</code> - a link the moment it is clicked</li>
+</ul>
+
+<h2>Text Decoration</h2>
+<p>It&#39;s common practice on the web to underline link text as a means of indicating a link. To toggle between underlined and not underlined, we use the <em>text-decoration</em> CSS property:</p>
+<ul>
+<li><code>text-decoration: underline | none;</code></li>
+</ul>
+<p>For example: <code>a:link {text-decoration: underline;}</code></p>
+
+<h2>Link Style Demo</h2>
+
+<h2>More Info on Styling Links</h2>
+<ul>
+<li><a href="http://www.w3schools.com/css/css_link.asp" title="CSS Links on W3Schools">W3Schools: CSS Links</a></li>
+</ul>
+</section>
+<hr>
+
+<section>
+<h1>Images</h1>
+<p>Images can be used to create dominance, similarity, texture and contrast. We can use photos as content, icons as design embelishments on text, and anything in between; in the foreground or background.</p>
+<p>Here are a number of ways to include images in your pages:</p>
+<ul>
+<li>As a content element using the &lt;img&gt; tag: i.e. <code>&lt;img src="https://drive.google.com/uc?id=0B6Sg_ALpI1HFVnFYMlI0YS1LVXM" alt="robot image"&gt;</code></li>
+<li>As a background style using the <em>background-image</em> CSS property: i.e. <code>#main_header { background-image:url('https://drive.google.com/uc?id=0B6Sg_ALpI1HFVnFYMlI0YS1LVXM'); }</code></li>
+<li>As a bullet style for a list item: <code>ul.checked li { list-style-image: url('https://drive.google.com/uc?id=0B6Sg_ALpI1HFVDBlVEdsenV3ZHc'); }</code></li>
+</ul>
+
+<h2>Using Google Drive to Host Images</h2>
+<p>You can host your images on Google Drive and link them into your pages from there using the <em>https://drive.google.com/uc?[your_file_id_here]</em> URL pattern.</p>
+
+<h2>Other sources for Images</h2>
+<ul>
+<li><a href="http://openphoto.net" title="OpenPhoto">openphoto</a></li>
+<li><a href="http://photopin.com/" title="photo pin">photo pin</a></li>
+<li><a href="http://www.shutterstock.com/" title="shutter stock">shutter stock</li>
+</ul>
+
+<h2>More Info on Images</h2>
+<ul>
+<li><a href="http://www.w3schools.com/html/html_images.asp" title="Images on W3Schools">W3Schools: Images</a></li>
+<li><a href="http://www.w3schools.com/css/css_background.asp" title="Backgrounds on W3Schools">W3Schools: Backgrounds</a></li>
+<li><a href="http://www.w3schools.com/cssref/pr_list-style-image.asp" title="List-Style_images on W3Schools">W3Schools: CSS list-style-image Property/a></li>
+</ul>
+</section>
+<hr>
+
+<section>
+<h1>Assignment 5</h1>
+<h2>Reading</h2>
+<ul>
+<li>Chapter 6 in <em><a href="http://www.amazon.com/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956" title="Design for Hackers on Amazon.com">Design for Hackers</a></em></li>
+</ul>
+
+<h2>Design</h2>
+
+<h3>Refine Your Layouts</h3>
+
+<p>After you have completed the reading assignment, revisit your HTML pages and begin layering in some of the <em>Design Principles</em> discussed in class and in the book.</p>
+<ul>
+<li>Create a horizontal navigation bar inside a &lt;nav&gt; element to navigate betwen your pages using a list styled with <code>display:inline;</code></li>
+<li>Create an &lt;aside&gt; element containing a verticle list with links to external sites, i.e. Yahoo, a favorite blog, ESPN, etc. Style it in such a way that it can be identified visually as an external link.</li>
+<li>Inside and &lt;article&gt; element, add a headline and some paragraph text. Use padding to give the copy some space from the border of your &lt;article&gt; element.</li>
+<li>Create gutters between your &lt;nav&gt;, &lt;article&gt; and &lt;aside&gt; elements using margins.</li>
+</ul>
+</section>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+</body>
+</html>
