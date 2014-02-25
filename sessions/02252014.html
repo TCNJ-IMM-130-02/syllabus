@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IMM 130-02 &ndash; Session 6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Fundementals for the Web Session #6">
+<meta name="author" content="thomesoni@gmail.com">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/IMM130.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+
+<header>
+<h1>Design Fundamentals for the Web &ndash; Session 6</h1>
+<p>February 25, 2014</p> 
+</header>
+
+<nav>
+<a href="../" title="back to Syllabus">&lt;&lt; Syllabus</a>
+</nav>
+
+<section>
+<h1>Review</h1>
+<a href="./02182014.html" title="Agenda for Tues. Feb 18, 2014">Last week&#8217;s agenda</a>
+
+</section>
+<hr>
+
+<section>
+<h1>Review of the Web Design Process</h1>
+<ol>
+<li>Identify the types of users you need to communicate with</li>
+<li>Identify what each user type needs to be able to do</li>
+<li>Organize your content semantically</li>
+<li>Compose appropriate layouts for your content</li>
+<li>Create visual hierarchies for your content with type</li>
+<li>Apply design principles to emphasize relationships between elements</li>
+<li class="bold">Create mood and enhance your visual hierarchies and element relationships using color</li>
+<li>Breath life into your design with behavioral feedback</li>
+<li>Test, rinse &amp; repeat!</li>
+</ol> 
+</section>
+
+<hr>
+<section>
+<h1>Color</h1>
+<p>Color is how we perceive different wavelengths of light. When we see a color in the real world, it represents the wavelenght or combination of 
+wavelengths that are reflected by the object. If we see a black cat, that cat&#39;s fur absorbs most wavelengths of light so we don&#39;t see light reflected. 
+If we see a white cat, that cat&#39;s fur reflects most wavelengths of light, so we see them all together &ndash; as the color white.</p>
+
+<h2>Digital Devices &amp; Color</h2>
+<p>Digital devices present color differently. On a digital device, the screen is made up of thousands of little light emitters that are black by default. We call 
+these emitters <em>pixels</em>. Depending on the device, these pixels can emit anywhere from 256 to over 16 million colors, which is accomplished by emitting combinations red, green &amp; blue 
+light, all colors off is black, and all on is white.</p>
+
+<h3>Device Color Depth</h3>
+<ul>
+<li>8 bit color = 256 colors</li>
+<li>16 bit color = 4096 colors (high color)</li>
+<li>24 bit color = 16,777,216 colors (true color) *the human eye can distinguish up to 10 million colors</li>
+<li>32 bit color = 24 bit color with an 8 bit transparency channel</li>
+</ul> 
+<p><a href="http://www.w3schools.com/cssref/css_colors.asp" title="CSS Colors on W3Schools">More info on web and device colors</a></p>
+
+<h2>Representing Color with CSS</h2>
+
+<h3>CSS Properties that take a color value</h3>
+<p>You can apply color to content elements using the following CSS properties:</p>
+<ul>
+<li><code>color:</code> (for text)</li>
+<li><code>background-color:</code> (for backgrounds)</li>
+<li><code>border-color:</code> (for borders)</li>
+<li><code>border-top-color:</code></li>
+<li><code>border-right-color:</code></li>
+<li><code>border-bottom-color:</code></li>
+<li><code>border-left-color:</code></li>
+</ul>
+<p>Color values for the above properties can be represented using hexadecimal, RGB, RGBA, HSL or HSLA color values.</p>
+
+<h3>Hexadecimal Color Values</h3>
+<p>Hexadecimal is a numbering system based on the number 16. Number values range from 0 to 9 and then A to F, where 0 = 0 and F = 15. You can combine hexadecimal digits to get bigger 
+numbers. Hexadecimal colors have 3 components, red, green &amp; blue, each represented by two hexadecimal (00-FF) value positions representing 0-255.</p>
+
+<h4>Examples: (# indicates this is a hex value)</h4>
+
+<ul>
+<li>#000000 = 0 red, 0 green, 0 blue = black</li>
+<li>#ffffff = ff (256) red, ff (256) green, ff (256) blue = white</li>
+<li>#ff0000 = ff (256) red, 00 (0) green, 00 (0) blue = bright red</li>
+<li>#00ff00 = 00 (0) red, ff (256) green, 00 (0) blue = bright green</li>
+<li>#0000ff = 00 (0) red, 00 (0) green, ff (256) blue = bright blue</li>
+</ul>
+
+<h3>RGB &ndash; Red, Green Blue</h3>
+<p>Similar in concept to hex color, RGB Color uses decimal numbers from 0-255 for each color channel:</p>
+<ul>
+<li>rgb(0,0,0) = black</li>
+<li>rgb(255,255,255) = white</li>
+<li>rgb(255,0,0) = bright red</li>
+<li>rgb(0,255,0) = bright green</li>
+<li>rgb(0,0,255) = bright blue</li>
+</ul>
+
+<h3>RGBA &ndash; Red, Green, Blue, Alpha</h3>
+
+<p>Same as RGB but with an 8 bit alpha channel for transparency:</p>
+<ul>
+<li>rgba(0,0,0,1.0) = black, fully opaque</li>
+<li>rgba(255,255,255,0.5) = white, 50% transparent</li>
+<li>rgba(255,0,0,0.75) = bright red, 75% opaque</li>
+<li>rgba(0,255,0,0.25) = bright green, 75% transparent</li>
+<li>rgba(0,0,255,0.90) = bright blue, 90% opaque</li>
+</ul>
+
+<h3>HSL &ndash; Hue, Saturation, Lightness</h3>
+
+<p>HSL stands for Hue, Saturation and Lightness, where Hue is the base color on the color wheel (0/360 = red, 120 = green, 240 = blue), 
+Saturation is how much color (0% is no color, 100% is full color) and Lightness is the brightness (0% = black, 100% most bright):</p>
+<ul>
+<li>hsl(0, 100%, 100%) = bright red</li>
+<li>hsl(0, 100%, 25%) = dark red</li>
+<li>hsl(120, 50%, 25%) = dark gray-green</li>
+<li>hsl(120, 100%, 25%) = dark green</li>
+<li>hsl(240, 50%, 75%) = light blue-grayv
+</ul>
+
+<h3>HSLA &ndash; Hue, Saturation, Lightness, Alpha</h3>
+
+<p>Same as HSL but with an 8 bit alpha channel for transparency:</p>
+<ul>
+<li>hsla(0, 100%, 100%, 1.0) = bright red, fully opaque</li>
+<li>hsla(0, 100%, 25%) = dark red</li>
+<li>hsla(120, 50%, 25%) = dark gray-green</li>
+<li>hsla(120, 100%, 25%) = dark green</li>
+<li>hsla(240, 50%, 75%) = light blue-gray</li>
+</ul>
+
+<p><a href="http://www.w3schools.com/cssref/css_colors_legal.asp" title="CSS Legal Color Values on W3Schools">More info on CSS color values</a></p>
+
+<h3>The psychology of color</h3>
+<p>Colors have a strong psychological effect upon users of your site, and can be used to establish a mood as well as create similarity, contrast, rhythm and dominance:</p>
+
+<ul>
+<li>Warm &amp; cool colors (warm colors have more energy, cool colors are calming)</li>
+<li>darker colors recede</li>
+<li>lighter colors pop</li>
+</ul>
+
+<h3>Demos</h3>
+<p><a href="http://jsfiddle.net/markdthompson/aLksy/5/" title="copy color fiddles">JSFiddles</a></p>
+<ul>
+<li>better body copy - when text is the same color, smaller text appears lighter and may need to be darkened to maintain contrast</li>
+<li>faded underlines - underlines can interfere with descenders and may need to have contrast lowered between the underline and the background</li>
+</li>warm up or cool down a background - to emphasize mood, you may want to warm up or cool down your background</li>
+</ul>
+
+<h3>Choosing colors</h3>
+<p>There are a number of approaches to selecting color schemes outlined in <em>Design for Hackers</em>, but they should all be used in support of the research you did with your User Personas and User Stories.
+Once you have an idea of who will be using your site and why, you can apply the methods outlined in the book. Tools like 
+<a href="http://colorschemedesigner.com/" title="ColorScheme Designer">Color Scheme Designer</a> can also help.</p>
+
+<h2>Exercise</h2>
+<p>Log into Github and experiment with color on your project from last week. Pay particlular attention to using color in support of your content hierarchies and design principles from last week.
+<ul>
+<li>Try using the <code>color:</code> property to color your text</li>
+<li>Try using the <code>background-color:</code> property to differentiate sections or headings</li>
+<li>Can you use color to create <em>dominance</em> for an element on your pages so the user&#39;s eye will go there first?</li>
+<li>Can you use color to identify links on your page?</li>
+</ul>
+
+</section>
+<hr>
+
+<section>
+<h1>Vision Document</h1>
+<p>The Vision Document is where you write down your idea for your project and provide details about what it should do, who it&#39;s for and how it should be made. The Vision Document will count toward as your mid-term grade 
+and will be the basis for your final project. It&#39;s a living document, in that you can (and probably will) update it over the coming weeks as you work through your final project.</p>
+</section>
+
+<section>
+<h1>Assignment 6</h1>
+<h2>Reading</h2>
+<ul>
+<li>Chapter 8 &amp; 9 in <em><a href="http://www.amazon.com/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956" title="Design for Hackers on Amazon.com">Design for Hackers</a></em></li>
+</ul>
+
+<h2>Design</h2>
+<h3>Write up your Vision Document for your final project</h3>
+<p>After you have completed the reading assignment, download the <a href="" title="">Vision Document template</a>, review it and write your own. You'll need to create some User Personas, User Stories and a site map 
+in support of your Vision Document</p>
+<p><strong>The Vision Document is due next week, Tuesday March 4, 2014.</strong></p>
+</section>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+</body>
+</html>
