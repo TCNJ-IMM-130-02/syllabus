@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IMM 130-02 &ndash; Session 7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Fundementals for the Web Session #7">
+<meta name="author" content="thomesoni@gmail.com">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/IMM130.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+
+<header>
+<h1>Design Fundamentals for the Web &ndash; Session 7</h1>
+<h2>Bootstrap, Mobile &amp; Responsive Design</h2>
+<p>March 4, 2014</p> 
+</header>
+
+<nav>
+<a href="../" title="back to Syllabus">&lt;&lt; Syllabus</a>
+</nav>
+
+<section>
+<h1>Review</h1>
+<a href="./02252014.html" title="Agenda for Tues. Feb 25, 2014">Last week&#8217;s agenda</a>
+
+</section>
+<hr>
+
+<section>
+<h1>Review of the Web Design Process</h1>
+<ol>
+<li>Identify the types of users you need to communicate with</li>
+<li>Identify what each user type needs to be able to do</li>
+<li>Organize your content semantically</li>
+<li>Compose appropriate layouts for your content</li>
+<li>Create visual hierarchies for your content with type</li>
+<li>Apply design principles to emphasize relationships between elements</li>
+<li>Create mood and enhance your visual hierarchies and element relationships using color</li>
+<li>Breath life into your design with behavioral feedback</li>
+<li>Test, rinse &amp; repeat!</li>
+</ol> 
+</section>
+<hr>
+
+<section>
+<h1>Devices</h1>
+<h2>Internet Traffic by Device Type</h2>
+<p><a href="http://boygeniusreport.files.wordpress.com/2013/11/mobile-traffic-walker-sands.jpg" title="2013 Internet traffic by device infographic from Walker-Sands">2013 Internet traffic by device infographic from Walker-Sands</a></p>
+
+<h2>Device Viewport Sizes</h2>
+<ul>
+<li><dl><dt>phones</dt><dd>up to 480px</dd></dl></li>
+<li><dl><dt>tablets</dt><dd>768px and up</dd></dl></li>
+<li><dl><dt>small desktops</dt><dd>992px and up</dd></dl></li>
+<li><dl><dt>phones</dt><dd>1200px and up</dd></dl></li>
+</ul>
+
+<p><a href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/" title="example list of device viewport sizes">Example list of device viewport sizes</a></p>
+
+<h2>Device Screen Resolutions</h2>
+<ul>
+<li><dl><dt>Standard</dt><dd>~100 ppi</dd></dl></li>
+<li><dl><dt>Retina Displays</dt><dd>200-350 ppi depending on standard viewing distance (higher for devices viewed closer &ndash; like iPhones)</dd></dl></li>
+</ul>
+
+<p>When viewing web pages using Retina Displays, images in your designs will appear smaller than what you expect because of their higher Pixel Per Inch (ppi) resolutions. As a result, you may choose to provide 
+alternate, higher resolution images when the device accessing your content has a Retina Display. This can be accomplished using Javascript and the <code>window.devicePixelRatio</code> property, which we&#39;ll discuss next session.</p>
+
+<h2>Device Connection Bandwidth</h2>
+<ul>
+<li><dl><dt>High Bandwidth</dt><dd>100+ mb/s wired networks</dd></dl></li>
+<li><dl><dt>Low Bandwidth</dt><dd>&lt;5 mb/s wifi networks</dd></dl></li>
+</ul>
+
+<p>Using Javascript, we can detect our device&#39;s connection speed and conditionally include appropriately-sized images, depending upon available bandwidth. This will ensure images download quickly, since 
+performance is an import design consideration.</p>
+</section>
+<hr>
+
+<section>
+<h1>Responsive Web Design</h1>
+
+<h2>Flexible Grids</h2>
+<ul>
+<li>replace fixed widths (px) with relative widths (% or em)</li>
+<li>responsive design formula: <em>target / context = result</em></li>
+</ul>
+
+<h3>Demo</h3>
+<p>Let&#39;s convert last week&#39;s layout example from fixed width to relative width.</p>
+<p><a href="//jsfiddle.net" title="Let's go over to JSFiddle">JSFiddle</a></p>
+
+<h2>&#64;media Queries</h2>
+<p>The &#64;media rule allows us to apply style rules conditionally based upon media type or device capabilities. For example, you can set your small text to sans-serif type for screen-based media, and serif type for printing:</p>
+<p><code>@media screen { * { font-family: Arial, Helvetica, Sans-Serif; } }<br>@media print { * { font-family: Times New Roman, Serif; } }</code></p>
+
+<p>Here's some more info on CSS &#64;media rules on <a href="http://www.w3schools.com/css/css_mediatypes.asp" title="W3Schools: CSS @media rules">W3Schools</a>.</p> 
+
+<h3>Demo</h3>
+<p>Let&#39;s use &#64;media queries to conditionalize our styles depending on device viewport size.</p>
+<p><a href="//jsfiddle.net" title="Let's go over to JSFiddle">JSFiddle</a></p>
+
+<h2>Responsive Media</h2>
+<p>In order for our grids to be flexible, we also have to make sure our media, including images and video, are flexible. We need to make our media responsive for a few reasons:</p>
+<ul>
+<li>the image sizes need to respond to viewport size</li>
+<li>image sizes should be responsive to device screen resolution (Standard or Retina Display)</li>
+<li>image sizes should be responsive to device connection bandwidth</li>
+</ul>
+
+<p>For the sake of this week&#39;s discussion, today we&#39;ll address making images responsive to viewport size using the <code>width</code> and <code>height</code> HTML attributes. We&#39;ll discess some alternatives 
+using Javascript that also address screen resolution and bandwidth considerations next session when we address Javascript &amp; jQuery.</p>
+ 
+<h3>Demo</h3>
+<p>Let&#39;s demonstrate using the <code>width</code> and <code>height</code> HTML attributes to make images responsive.</p>
+<p><a href="//jsfiddle.net" title="Let's go over to JSFiddle">JSFiddle</a></p>
+
+<h2>Mobile First</h2>
+<p>When creating Responsive Web Designs, we want to take a <span class="bold">mobile-first</span> approach &ndash; we want to assume our smallest device is our default, 
+and layer additional <span class="bold">&#64;media rules</span> on top of that. With this <span class="bold">mobile-first</span> philosophy, we need to include a special meta tag in our 
+HTML &lt;head&gt; tag to tell the browser we want it to maximize it&#39;s viewing area to fit the device&#39;s viewport:
+<p><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></p>
+
+<h2>Exercise</h2>
+<p>Let&#39;s log into <a href="http://github.com" title="log into Github">Github</a> and update our layouts &amp; stylesheets to make them Responsive.</p>
+<ol>
+<li>add the <span class="bold">viewport</span> meta tag to the headers in our project HTML files</li>
+<li>replace fixed widths (px) with relative widths (% or em) using the responsive design formula: <em>target / context = result</em></li>
+<li>update your stylesheets with &#64;media rules for each of the device viewport sizes discussed earlier in class</em></li>
+<li>make your images responsive by setting the <code>width="100&#37;"</code> &amp; <code>height="100&#37;"</code> attributes</li>
+</section>
+<hr>
+
+<section>
+<h1>Twitter&#39;s  Bootstrap CSS Framework</h1>
+
+<p>Twitter&#39;s Bootstrap CSS Framework is a <span class="bold">mobile-first</span>, Responsive Web Design framework. Bootstrap gives you a complete grid system with default &#64;media rules for responsive 
+styling, along with sensible default font settings, and a set of baked-in CSS icons with their Glyphicons componenet. Use Bootstrap as a starting point, and override it using your own stylesheet where you want more control.</p> 
+
+<h2>Installing Bootstrap</h2>
+<p>Bootstrap requires a number of prerequisite libraries to be included in your project, including jQuery and, for IE 8 compatability, respond.js and html5shiv.js. We&#39;ll use a combination of the 
+Content Delivery Network (CDN) version of Bootstrap and the basic template from Bootstrap&#39;s <a href="http://getbootstrap.com/getting-started/" title="Gettig started with Bootstrap">Getting Started</a> page to get set up.</p>
+
+<h2>Using Bootstrap</h2>
+<p>Now that we have Bootstrap installed, let&#39;s hook it into our layout using Bootstrap&#39;s container, row and col-* classes:</p> 
+<ul>
+<li>Bootstrap&#39;s <code>container</code> class replaces our <code>wrapper</code> id, and functions as the root container for our site&#39;s content &ndash; <a href="http://getbootstrap.com/css/#overview" title="Bootstrap overview">Bootstrap .container class</a></li>
+<li>The <code>row</code> class acts as a container for elements you want to "float", but should "respond" by wrapping under when the screen size is reduced &ndash; <a href="http://getbootstrap.com/css/#overview" title="Bootstrap overview">the Bootstrap Grid</a></li>
+<li>The <code>col-*</code> classes give you flexible columns including gutters and padding &ndash; <a href="http://getbootstrap.com/css/#overview" title="Bootstrap overview">the Bootstrap Grid</a></li>
+</ul>
+
+<h3>Demo</h3>
+<p>Log into <a href="http://jsfiddle.net" title="log into JSFiddle">JSFiddle<</a> and let&#39;s update our example layout to use Bootstrap.</p>
+</section>
+
+<section>
+<h1>Assignment 7</h1>
+<h2>Reading</h2>
+<ul>
+<li>Do the <a href="http://webdesignerwall.com/tutorials/responsive-design-in-3-steps" title="do the RWD in 3 Steps tutorial">Responsive Web Design in 3 Steps</a> tutorial.</li>
+<li>Review the Bootstrap <a href="http://getbootstrap.com/getting-started/" title="review the Bootstrap 'Getting Started' page">Getting Started</a> page</li>
+<li>Review the Bootstrap <a href="http://getbootstrap.com/css/" title="review the Bootstrap 'CSS' page">CSS</a> page for details on Bootstraps default styles and using it&#39;s grid</li>
+</ul>
+
+<h2>Design</h2>
+<h3>Make your project Responsive using the Bootstrap CSS Framework</h3>
+<p>Log into Github and fork your current project into a new repository. Using the Bootstrap basic template as your guide, update your project to use Bootstrap as your base stylesheet:</p>
+<ol>
+<li>link the Bootstrap CDN stylesheet into your HTML &lt;head&gt;: <code>&lt;link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"&gt;</code></li>
+<li>link in the javascript libraries that make IE8 compatible:<br>
+<code>
+&lt;!--[if lt IE 9]&gt;<br>
+&lt;script src=&quot;https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script src=&quot;https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;![endif]--&gt;
+</code>
+</li>
+<li>link in the jQuery &amp; Bootstrap javascript libraries at the bottom of your html right above the &lt;/body&gt; tag</li>
+<li>replace your <code>id="wrapper"</code> with <code>class="container"</code> in your outer <code>&lt;div&gt;</code><li>
+<li>use the <code>row</code> and <code>col-*</code> classes to recreate your responsive layout using Bootstrap</li>
+</ul>
+
+</section>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+</body>
+</html>
