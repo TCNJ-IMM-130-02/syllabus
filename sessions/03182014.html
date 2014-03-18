@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IMM 130-02 &ndash; Session 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Fundementals for the Web Session #7">
+<meta name="author" content="thomesoni@gmail.com">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/IMM130.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+
+<header>
+<h1>Design Fundamentals for the Web &ndash; Session 8</h1>
+<h2>Javascript &amp; jQuery</h2>
+<p>March 18, 2014</p> 
+</header>
+
+<nav>
+<a href="../" title="back to Syllabus">&lt;&lt; Syllabus</a>
+</nav>
+
+<section>
+<h1>Review</h1>
+<a href="./03042014.html" title="Agenda for Tues. Mar 4 2014">Last week&#8217;s agenda</a>
+
+</section>
+<hr>
+
+<section>
+<h1>Review of the Web Design Process</h1>
+<ol>
+<li>Identify the types of users you need to communicate with</li>
+<li>Identify what each user type needs to be able to do</li>
+<li>Organize your content semantically</li>
+<li>Compose appropriate layouts for your content</li>
+<li>Create visual hierarchies for your content with type</li>
+<li>Apply design principles to emphasize relationships between elements</li>
+<li>Create mood and enhance your visual hierarchies and element relationships using color</li>
+<li class="bold">Breath life into your design with behavioral feedback</li>
+<li>Test, rinse &amp; repeat!</li>
+</ol> 
+</section>
+<hr>
+
+<section>
+<h1>Introduction to Javascript</h1>
+<h2>What is Javascript?</h2>
+<p>Javascript is dynamic programming language that most common web browsers can interpret. It is most often used to create dynamic web interfaces, but can also 
+be used for server-side programming, or to develop desktop and mobile applications. Check out the <a href="http://en.wikipedia.org/wiki/JavaScript" title="Javascript Wikipedia entry">Javascript Wikipedia entry</a> 
+for more details on its history, implementations and usage.</p>
+
+<h2>Adding Javascript to Our Pages</h2>
+<p>We can include Javascript in our pages in three ways:</p>
+<ul>
+<li>link external Javascript files</li>
+<li>embed Javascript directly in our page</li>
+<li>use it inline inside our HTML elements</li>
+</ul>
+<h3>The &lt;script&gt;&lt;/script&gt; Tag</h3>
+<p>To include external Javascript files or embed Javascript locally, we use the script tag:</p>
+<p><code>
+&lt;script&gt;<br>
+...<br>
+&lt;/script&gt;</br>
+</code>
+</p>
+
+<h3>Linking External Javascript Files</h3>
+<p>When using the script tag to include external javascript files, we use the <em>src</em> attribute to include to path to our Javascript file.</p>
+<p><code>
+ &lt;script src="/path/to/my/javascript_file.js"&gt;&lt;/script&gt;
+</code></p>
+
+<h3>Embedding Javascript</h3>
+<p>When embedding our Javascript locally, we simply write our javascript between the &lt;script&gt; tag and the &lt;/script&gt; tag.</p>
+<p><code>
+ &lt;script&gt;<br> 
+ &nbsp;&nbsp;&nbsp;&nbsp;/* here's my Javascript */<br> 
+ &nbsp;&nbsp;&nbsp;&nbsp;var myVariable = 0; <br> 
+ &nbsp;&nbsp;&nbsp;&nbsp;console.log(myVariable);<br> 
+ &lt;/script&gt;
+</code></p>
+
+<h3>Inline Javascript</h3>
+<p>When using inline Javascript, you attach the javascript as an attribute to your target HTML element:</p>
+<p><code>
+&lt;a href="javascript:alert( 'Hello World' );"&gt;Click Me!&lt;/a&gt;
+</code></p>
+
+<h2>Using Javascript</h2>
+<h3>Variables</h3>
+<p><a href="http://jsfiddle.net">JSFiddle Sketch</a></p>
+
+<h3>Types</h3>
+<p><a href="http://jsfiddle.net">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/javascript-101/types/">Type examples in jQuery documentation</a></p>
+
+<h3>Operators</h3>
+<p><a href="http://jsfiddle.net">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/javascript-101/operators/">Operator examples in jQuery documentation</a></p>
+
+<h3>Conditionals</h3>
+<p><a href="http://jsfiddle.net">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/javascript-101/conditional-code/">Conditional examples in jQuery documentation</a></p>
+
+<h3>Loops</h3>
+<p><a href="http://jsfiddle.net">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/javascript-101/loops/">Loop examples in jQuery documentation</a></p>
+
+<h2>Exercise</h2>
+<p>Create a simple HTML page and add Javascript using the three methods above:</p>
+<ol>
+<li>Create an external Javascript file called "myscript.js" and include the line <code>alert("My first linked Javascript!");</code></li>
+<li>Link in your external Javascript file using the <code>&lt;script src="/path/to/my/javascript_file.js"&gt;&lt;/script&gt;</code> tag</li>
+<li>Add some embedded Javascript using another &lt;script&gt; &lt;/script&gt; tag and include the line <code>alert("My first embedded Javascript!");</code> between them</li>
+<li>Create a link using the <code>&lt;a href=""&gt;&lt;/a&gt;</code> and include the line <code>javascript:alert("My first inline Javascript!");</code> inside the <span class="bold">href</span> attribute</li>
+</ol>
+
+</section>
+<hr>
+
+<section>
+<h1>Introduction to jQuery</h1>
+<h2>What is jQuery?</h2>
+<p>jQuery is a Cross-Browser Javascript library that is designed to simplify using Javascript for common tasks including user interface enhancements, special effects, managing events, 
+handling forms and more. For more information on jQuery and its background, checkout the <a href="http://en.wikipedia.org/wiki/JQuery" title="jQuery on Wikipedia">jQuery Wikipedia entry</a>.</p>
+
+<h2>Using jQuery</h2>
+<a href="http://learn.jquery.com/about-jquery/how-jquery-works/" title="Getting Started with jQuery">Getting Started with jQuery</a>
+
+<h3>Adding jQuery to your project</h3>
+<p>To include jQuery in your project, you can either download it and link it in as you would your other Javascript files, or you can use jQuery&#39;s CDN:</p>
+<p><code>&lt;script src="http://code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;</code></p>
+<p><a href="http://jquery.com/download/" title="download jQuery">Download jQuery</a></p>
+
+<h3>$( document ).ready()</h3>
+<p><a href="http://jsfiddle.net" title="document ready fiddle">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/using-jquery-core/document-ready/" title="$( document ).ready() documentation">$( document ).ready() documentation</a></p>
+
+<h3>Selecting Elements</h3>
+<p><a href="http://jsfiddle.net" title="selection fiddle">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/using-jquery-core/selecting-elements/" title="Selecting Elements">Selecting Elements with jQuery</a></p>
+
+<h3>Chaining Selections</h3>
+<p><a href="http://jsfiddle.net" title="chaining fiddle">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/using-jquery-core/working-with-selections/" title="Chaining jQuery">Chaining jQuery Selections</a></p>
+
+<h3>CSS &amp; Styling</h3>
+<p><a href="http://jsfiddle.net" title="styling fiddle">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/using-jquery-core/css-styling-dimensions/" title="jQuery Styling">Styling &amp; CSS with jQuery</a></p>
+
+<h3>Attributes</h3>
+<p><a href="http://jsfiddle.net" title="attribute fiddle">JSFiddle Sketch</a></p>
+<p><a href="http://learn.jquery.com/using-jquery-core/attributes/" title="jQuery Attribute Manipulation">Manipulating HTML Element Attributes with jQuery</a></p>
+
+</section>
+<hr>
+
+<section>
+<h1>Introduction to jQuery Plugins</h1>
+<h2>What is a jQuery Plugin?</h2>
+<p>jQuery Plugins are extensions to jQuery written and packaged by third party developers that provide some specific feature not covered by jQuery Core. If you&#39;re looking for  
+a photo gallery feature, a parallax feature or many, many others, chances are, someone has made a jQuery Plugin for it.</p>
+
+<h3>Finding Plugins</h3>
+<p>You can find plugins in the <a href="http://plugins.jquery.com/" title="The jQuery Plugin Registry">jQuery Plugin Registry</a>. They&#39;re organized by tag, 
+so you can explore them based on the funtionality you're looking for.</p>
+
+<h3>Installing &amp; Using Plugins</h3>
+<p>Every plugin has it&#39;s own installation requirements, but generally speak, you&#39;ll only need to link in the plugin&#39;s javascript file and possibly a stylesheet or two. 
+Some plugins may require other plugins, so it&#39;s important to check out the documentation for any plugins you&#39;re considering using to see it&#39;s requirements and usage instructions.</p>
+
+</section>
+<hr>
+
+
+<section>
+<h1>Assignment 8</h1>
+<h2>Reading</h2>
+<ul>
+<li>Review the <a href="http://learn.jquery.com/javascript-101/" title="Javascript 101 on learn.jquery.com">Javascript 101</a> section of the jQuery documentation.</li>
+<li>Review the <a href="http://learn.jquery.com/using-jquery-core/" title="Using jQuery Core on learn.jquery.com">Using jQuery Core</a> section of the jQuery documentation.</li>
+</ul>
+
+<h2>Design</h2>
+<h3>Differentiate External Link Behavior with jQuery</h3>
+<p>You can use jQuery to differentiate the behavior of any external links in your project by having them target new browser tabs instead of navigating away from your site in the current tab.</p>
+<ul>
+<li>Create a new HTML page in Github</li>
+<li>Link in jQuery</li>
+<li>Create 2 lists of links (one for internal links and one for external links</li>
+<li>Add a class to the external link anchor tags identifying them as "external"</li>
+<li>Use jQuery selectors to select all the external links (and only the external links) and attach the target attribute with a value of "_blank" to each*</li>
+</ul>
+<p><code>*hint: use .attr("target","_blank");</code></p>
+
+<h3>Implement an Image Gallery jQuery Plugin in an HTML page</h3>
+<p>Head over the the jQuery Plugin Registry and find an Image Gallery Plugin.</p>
+<ul>
+<li>Create a new HTML page on Github</li>
+<li>Link in jQuery</li>
+<li>Follow the instuctions for the Image Gallery Plugin you chose and implement a simple image gallery on your page</li>
+</ul>
+
+</section>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+</body>
+</html>
