@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IMM 130-02 &ndash; Session 9</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Fundementals for the Web Session #10">
+<meta name="author" content="thomesoni@gmail.com">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/IMM130.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+
+<header>
+<h1>Design Fundamentals for the Web &ndash; Session 10</h1>
+<h2>More HTML Forms, PHP &amp; JSON</h2>
+<p>March 18, 2014</p> 
+</header>
+
+<nav>
+<a href="../" title="back to Syllabus">&lt;&lt; Syllabus</a>
+</nav>
+
+<section>
+<h1>Review</h1>
+<a href="./03252014.html" title="Agenda for Tues. Mar 25 2014">Last week&#8217;s agenda</a>
+
+</section>
+<hr>
+
+<section>
+<h1>Review of PHP</h1>
+<h2>What is PHP?</h2>
+<p>PHP stands for <em>PHP Hypertext Preprocessor</em>, and is a server-side programming language developed specifically for the web, although it can be used as a more general-purpose server-side scripting language as well.</p>
+
+<h3>Web Server Access</h3>
+<p>To use PHP, you&#39;ll need access to a web server. If you haven&#39;t set up your TCNJ web hosting account yet, you can follow 
+<a href="http://helpdesk.pages.tcnj.edu/web-development/student-organization-web-development-faqs/" title="TCNJ Web Account Instuctions">these instructions</a> to do so. There are also many 
+alternative hosting services available were you can gain access to your own web server. Ask your friends &amp; classmates for suggestions if you're interested in outside hosting.</p>
+
+<h3>FTP</h3>
+<p>Once you have web server access, you'll need FTP software to transfer your files to your server. FTP stands for <em>File Transfer Protocol</em> and can be used to copy files from your local computer to your web server.</p>
+
+<h2>Using PHP</h2>
+<p>PHP has a similar syntax to Javascript and C, but has some unique features as well. Let's go ahead and demonstrate some of the features of PHP.</p>
+<p>
+<code>
+&lt;?php<br>
+	/* <br>
+	This is a multi-line comment in PHP,<br>
+	the same as in Javascript &amp; CSS.<br>
+	*/<br>
+	<br>
+	// here's a single line comment like in Javascript as well<br>
+<br>
+	<br>
+	// like Javascript, PHP variables are "loosely" typed 	<br>
+	$myString = "a text string";<br>
+	$myInteger = 10;<br>
+	$myDecimal = 3.14159;<br>
+	$myIndexedArray = [1,2,3,4];<br>
+	$myAssociativeArray = ['firstname'=>'','lastname'=>'', 'email'=>''];<br>
+<br>
+	if(!empty($myAssociativeArr["email"])){<br>
+		// do something if it's true<br>
+	} else {<br>
+		// do something else if it's false<br>
+	}<br>
+?&gt;<br>
+</code>
+</p>
+
+<h2>Exercise</h2>
+<ul>
+<li>If you don&#39;t already have access to your TCNJ web account, go ahead and set that up by following 
+<a href="http://helpdesk.pages.tcnj.edu/web-development/student-organization-web-development-faqs/" title="TCNJ Web Account Instuctions">these instructions</a></li>
+<li>Log into <a href="http://github.com" title="log into Github">Github</a> and create a new repository called <span class="bold">basic_php</span>. Create a new file called 
+<span class="bold">info.php</span> and type in the following:
+<p>
+<code>
+&lt;?php<br>
+echo phpinfo();<br>
+?&gt;
+</code>
+</p>
+<li>Commit your new file, and click on the <span class="bold">Download ZIP</span> button on the bottom right column of your repository page.</li>
+<li>Using an FTP client, upload your PHP file to your web server</li>
+</li>Once your file is uploaded, point your web browser to your the URL for your PHP file, e.g. <a href="http://www.tcnj.edu/~thompsom/info.php" title="example PHP file URL">http://www.tcnj.edu/~thompsom/info.php</a></li>
+<li>What do you see?</li>
+</ul>
+
+</section>
+<hr>
+
+<section>
+<h1>Introduction to JSON &amp; Ajax</h1>
+<h2>What is JSON?</h2>
+<p>JSON stands for <em>Javascript Object Notation</em> and is becoming a widespread alternative to XML as a data exchange format. Many web services including Facebook, 
+Twiiter and Yahoo use JSON as their return data format for their APIs (Application Programming Interfaces).</p>
+<p>jQuery has a number of functions that will let us call other scripts, either on our server, or on remote servers like Twitter, Yahoo, or even tcnj.com. Using these functions, 
+we can access our PHP scripts remotely, allowing us to host our HTML on Github Pages, but execute server-side logic on other servers. This is called <span class="bold">Cross Site Scripting</span>, 
+and used to be (and can still be) considered a security threat, but is becoming an increasingly common way of delivering content through APIs.</p>
+
+<h2>Demo</h2>
+<p>Let's take a look at some <a href="https://github.com/TCNJ-IMM-130-02/json_form2mail" title="Sample jQuery JSONP Form 2 Mail code">example jQuery JSON Ajax code</a> and see it in 
+<a href="http://www.tcnj.edu/~thompsom/jsonpform2email.html" title="JSONP form 2 mail script">action</a>.</p>
+
+</section>
+<hr>
+
+
+<section>
+<h1>Assignment 10</h1>
+<h2>Reading</h2>
+<ul>
+<li>Review your Vision Document, paying particular attention to your User Personas &amp; User Stories</li>
+</ul>
+
+<h2>Design</h2>
+<h3>Prepare your site for initial Design Review and User Testing</h3>
+<ul>
+<li>Make sure you have pages representing each User Story in your Vision Document</li>
+<li>Be prepared to speak about your design, explaining your design decisions about type, content organization, design principles used, color and use of Javascript/PHP.</li>
+</ul>
+
+</section>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+</body>
+</html>
