@@ -80,25 +80,6 @@ alternative hosting services available were you can gain access to your own web 
 </code>
 </p>
 
-<h2>Exercise</h2>
-<ul>
-<li>If you don&#39;t already have access to your TCNJ web account, go ahead and set that up by following 
-<a href="http://helpdesk.pages.tcnj.edu/web-development/student-organization-web-development-faqs/" title="TCNJ Web Account Instuctions">these instructions</a></li>
-<li>Log into <a href="http://github.com" title="log into Github">Github</a> and create a new repository called <span class="bold">basic_php</span>. Create a new file called 
-<span class="bold">info.php</span> and type in the following:
-<p>
-<code>
-&lt;?php<br>
-echo phpinfo();<br>
-?&gt;
-</code>
-</p>
-<li>Commit your new file, and click on the <span class="bold">Download ZIP</span> button on the bottom right column of your repository page.</li>
-<li>Using an FTP client, upload your PHP file to your web server</li>
-</li>Once your file is uploaded, point your web browser to your the URL for your PHP file, e.g. <a href="http://www.tcnj.edu/~thompsom/info.php" title="example PHP file URL">http://www.tcnj.edu/~thompsom/info.php</a></li>
-<li>What do you see?</li>
-</ul>
-
 </section>
 <hr>
 
@@ -113,7 +94,21 @@ and used to be (and can still be) considered a security threat, but is becoming 
 
 <h2>Demo</h2>
 <p>Let's take a look at some <a href="https://github.com/TCNJ-IMM-130-02/json_form2mail" title="Sample jQuery JSONP Form 2 Mail code">example jQuery JSON Ajax code</a> and see it in 
-<a href="http://www.tcnj.edu/~thompsom/jsonpform2email.html" title="JSONP form 2 mail script">action</a>.</p>
+<a href="http://www.tcnj.edu/~thompsom/jsonpform2email.html" title="JSONP form 2 mail script">action</a>.</p><p>You can also find both the HTML and the PHP code at 
+<a href="https://github.com/TCNJ-IMM-130-02/json_form2mail" title="JSON PHP Form Example Repo">this Github repositiory</a>.</p>
+
+<h2>Exercise</h2>
+<h3>Create an Ajax/JSON-enabled Contact Form in Github</h3>
+<ul>
+<li>If you don&#39;t already have access to your TCNJ web account, go ahead and set that up by following 
+<a href="http://helpdesk.pages.tcnj.edu/web-development/student-organization-web-development-faqs/" title="TCNJ Web Account Instuctions">these instructions</a></li>
+<li>Log into <a href="http://github.com" title="log into Github">Github</a> and create a new repository called <span class="bold">json_contant_form</span></li>
+<li>Create a new HTML file and copy into it the Form &amp; Javascript from the demo HTML page above.</li>
+<li>Create a new PHP fileand copy into it the code from the example PHP file above</li>
+<li>Using an FTP client, upload your PHP file to your web server</li>
+<li>In Github, change the <code>action = ""</code> attribute in your HTML page form to reflect the URL to your PHP file on your Web Account (e.g. <code>http://www.tcnj.edu/~thompsom/jsonpform2email.php</code>)</li>
+<li>Create a gh-pages branch for your repo and test out your new Ajax/JSON-enabled contact form</li>
+</ul>
 
 </section>
 <hr>
